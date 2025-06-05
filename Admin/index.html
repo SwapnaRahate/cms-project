@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Dashboard</title>
+
+    <!--montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    
+
+    <!--Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!--Header-->
+        <div class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <span class="material-symbols-outlined">search</span>
+            </div>
+            <div class="header-right">
+                <span class="material-symbols-outlined">notifications</span>
+                <span class="material-symbols-outlined">mail</span>
+                <span class="material-symbols-outlined"> account_circle</span>
+            </div>
+        <!--End of header-->
+        </div>
+        <!--sidebar-->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </div>
+                <span class="material-symbols-outlined" onclick="closeSidebar()"> close </span>
+            </div>
+            <ul class="sidebar-list">
+                <a href="#"><li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">Dashboard</span>
+                </li></a>
+                <a href="productList.html"><li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">inventory</span>Products
+                </li></a>
+                <a href="#"><li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">Settings</span>Setting
+                </li></a>
+            </ul>
+        </aside>
+        <!--End of sidebar-->
+        <!--Main-->
+        
+            <div class="main-container">
+                <div class="main-title">
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="main-card">
+                    <div class="card">
+                        <div class="card-inner">
+                            <h3>PRODUCTS</h3>
+                            <span class="material-symbols-outlined">inventory</span>
+                        </div>
+                    <h1>249</h1>
+                    </div>
+                    <div class="card">
+                        <div class="card-inner">
+                            <h3>CATEGORY</h3>
+                            <span class="material-symbols-outlined">category_search</span>
+                        </div>
+                    <h1>25</h1>
+                    </div>
+                    <div class="card">
+                        <div class="card-inner">
+                            <h3>CUSTOMER</h3>
+                            <span class="material-symbols-outlined">group_add</span>
+                        </div>
+                    <h1>1500</h1>
+                    </div>
+                    <div class="card">
+                        <div class="card-inner">
+                            <h3>ALERT</h3>
+                            <span class="material-symbols-outlined">notification_important</span>
+                        </div>
+                    <h1>56</h1>
+                    </div>
+                </div>
+                
+                <div class="charts">
+                    <div class="charts-card">
+                        <h2 class="chart-title">Top 5 products</h2>
+                        <div class="bar-chart" id="chart"></div>
+                    </div>
+                    <div class="charts-card">
+                        <h2 class="chart-title">Purchase and Sales Orders</h2>
+                        <div class="bar-chart"></div>
+                    </div>
+                </div>
+            </div>
+           
+        
+        <!--End of main-->
+    </div>
+
+
+
+
+    <!--Apexcharts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/4.3.0/apexcharts.min.js" integrity="sha512-QgLS4OmTNBq9TujITTSh0jrZxZ55CFjs4wjK8NXsBoZb04UYl8wWQJNaS8jRiLq6/c60bEfOj3cPsxadHICNfw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- JS file-->
+     <script src="js/script.js"></script>
+</body>
+</html>

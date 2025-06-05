@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product-List</title>
+
+    <!--montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    
+
+    <!--Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="style/product.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!--Header-->
+        <div class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <h2>Products </h2>
+            </div>
+            <div class="header-right">
+                <span class="material-symbols-outlined">add_box</span>
+                <span class="material-symbols-outlined">content_copy</span>
+                <span class="material-symbols-outlined">delete</span>
+                
+            </div>
+        <!--End of header-->
+        </div>
+        <!--sidebar-->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </div>
+                <span class="material-symbols-outlined" onclick="closeSidebar()"> close </span>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">Dashboard</span>
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">inventory</span>Products
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">Settings</span>Setting
+                </li>
+            </ul>
+        </aside>
+        <!--End of sidebar-->
+        <!--Main-->
+        <div class="main-container">
+            <div class="main-container-inner">
+                <!--Product List in Main-->
+                <div class="product-List">
+                    <div class="product--List-title">
+                        <span class="material-symbols-outlined">list</span>
+                        Product List
+                    </div>
+                    <div class="product-list-detail">
+                        <div class="product-list-detail-inner">
+                            <table id="product-table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <form action="#">
+                                            <input type="checkbox" name="" id="selectAll"> 
+                                            </form>
+                                        </th>
+                                        <th>Image</th>
+                                        <th>Product Name</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--Rows will be inserte by Javascript(table.js)-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--Product List in Main End-->
+                <!--Filter in Main-->
+                <div class="filter">
+                    <div class="filter-title">
+                        <span class="material-symbols-outlined">filter_alt</span>
+                        Filter
+                    </div>
+                    <div class="filter-form">
+                        <form id="filterForm" action="#">
+                            <div>
+                                <label>Product Name</label>
+                                <input type="text" id="filterProductName" placeholder="Product Name">
+                            </div>
+                            
+                            <div>
+                                <label>Category</label>
+                                <input type="text" id="filterCategory" placeholder="Category">
+                            </div>
+                            <div>
+                                <label>Price</label>
+                                <input type="text" id="filterPrice" placeholder="Price">
+                            </div>  
+                            <div>
+                                <label>Quantity</label>
+                                <input type="number" id="filterQuant" >
+                            </div>
+                            <div>
+                                <select id="filterStatus">
+                                    <option value="">Any</option>
+                                    <option value="Add">Add</option>
+                                    <option value="Remove">Remove</option>
+                                    <option value="Modify">Modify</option>
+                                </select>
+                            </div>
+                            <div>                             
+                                <button type="button" id="applyFilter">Filter</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+                <!--Filter in Main end-->
+            </div>
+        </div>
+        <!--End of main-->
+    </div>
+
+
+
+
+
+
+    <!-- JS file-->
+     <script src="js/script1.js"></script>
+     <script src="js/table.js"></script>
+</body>
+</html>
